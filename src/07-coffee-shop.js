@@ -32,4 +32,176 @@
  */
 export function calculateCoffeePrice(size, type, extras = {}) {
   // Your code here
+  const sizes = size.toLowerCase();
+  const types = type.toLowerCase();
+
+  if (sizes == "small") {
+    if (types == "regular") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 3;
+        } else {
+          return 0.5 + 3;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 3;
+      } else {
+        return 3;
+      }
+    }
+    if (types == "latte") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 3 + 1;
+        } else {
+          return 0.5 + 3 + 1;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 3 + 1;
+      } else {
+        return 3 + 1;
+      }
+    }
+    if (types == "cappuccino") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 3 + 1.5;
+        } else {
+          return 0.5 + 3 + 1.5;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 3 + 1.5;
+      } else {
+        return 3 + 1.5;
+      }
+    }
+    if (types == "mocha") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 3 + 2;
+        } else {
+          return 0.5 + 3 + 2;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 3 + 2;
+      } else {
+        return 3 + 2;
+      }
+    } else {
+      return -1;
+    }
+  } else if (sizes == "medium") {
+    if (types == "regular") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 4;
+        } else {
+          return 0.5 + 4;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 4 ;
+      } else {
+        return 4 ;
+      }
+    }
+    if (types == "latte") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 4 + 1;
+        } else {
+          return 0.5 + 4 + 1;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 4 + 1;
+      } else {
+        return 4 + 1;
+      }
+    }
+
+    if (types == "cappuccino") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 4 + 1.5;
+        } else {
+          return 0.5 + 4 + 1.5;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 4 + 1.5;
+      } else {
+        return 4 + 1.5;
+      }
+    }
+    if (types == "mocha") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 4 + 2;
+        } else {
+          return 0.5 + 4 + 2;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 4 + 2;
+      } else {
+        return 4 + 2;
+      }
+    } else {
+      return -1;
+    }
+  } else if (sizes == "large") {
+    if (types == "regular") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 5;
+        } else {
+          return 0.5 + 5 ;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 5 ;
+      } else {
+        return 5;
+      }
+    }
+    if (types == "latte") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 5+1;
+        } else {
+          return 0.5 + 5 +1;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 5 +1;
+      } else {
+        return 5+1;
+      }
+    }
+    if (types == "cappuccino") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 5+1.50;
+        } else {
+          return 0.5 + 5 +1.50;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 5 +1.50;
+      } else {
+        return 5+1.50;
+      }
+    }
+    if (types == "mocha") {
+      if (extras.whippedCream) {
+        if (extras.extraShot) {
+          return 0.75 + 0.5 + 5+2;
+        } else {
+          return 0.5 + 5 +2;
+        }
+      } else if (extras.extraShot) {
+        return 0.75 + 5 +2;
+      } else {
+        return 5+2;
+      }
+    } else {
+      return -1;
+    }
+  } else {
+    return -1;
+  }
 }

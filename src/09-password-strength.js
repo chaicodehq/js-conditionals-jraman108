@@ -26,5 +26,96 @@
  * @returns {string} "weak", "medium", "strong", or "very strong"
  */
 export function checkPasswordStrength(password) {
-  // Your code here
-}
+  
+    if(typeof password !== "string"|| password.length===0){
+    return "weak";
+  }
+
+  let points =0;
+  let i=0;
+  let j=0;
+  let k=0;
+
+  if(password.length>=8){
+    points +=1;
+  }
+
+  for(let char of password){
+    if(char===char.toUpperCase() && char!==char.toLowerCase()){
+    i++;
+  }} if(i>=1){
+    points +=1;
+  }
+
+  for(let char of password){
+    if(char===char.toLowerCase() && char!==char.toUpperCase()){
+    j++;
+
+  }} if(j>=1){
+    points +=1;
+  }
+
+  for(let char of password){
+      if(char>="0" && char<="9"){
+        k++;
+      }
+  }if(k>=1){
+    points +=1;
+  }
+
+  if(/[^a-zA-Z0-9]/.test(password)){
+    points +=1;
+  }
+
+
+
+  if(points>=0 && points<=1){
+    return "weak";
+  } else if(points>=2 && points<=3){
+    return "medium";
+  } else if(points==4){
+    return "strong";
+  } else if(points==5){
+    return "very strong";
+  }
+
+
+
+  // if(typeof password !== "string" || password.length===0){
+  //   return "weak";
+  // }
+
+  // let points =0;
+
+  // if(password.length>=8){
+  //   points++;
+  // }
+
+  // if(/[A-Z]/.test(password)){
+  //   points++;
+  // }
+
+  // if(/[a-z]/.test(password)){
+  //   points++;
+  // }
+
+  // if(/\d/.test(password)){
+  //   points++;
+  // }
+
+  // if(/[^a-zA-Z0-9]/.test(password)){
+  //   points ++;
+  // }
+
+  // if(points<=1){
+  //   return "weak";
+  // } else if(points<=3){
+  //   return "medium";
+  // } else if(points===4){
+  //   return "strong";
+  // } else{
+  //   return "very strong";
+  // }
+
+  }
+
